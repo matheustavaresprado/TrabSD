@@ -21,14 +21,14 @@ public class Cliente {
     
     
     public void realizaRequisicao(){
-        Random r = new Random();
-        int a = r.nextInt(100);
+        int a = new Random().nextInt(100);
+        int numArq = new Random().nextInt(3);
         
-        if(a < 0){
-            new Escrita(this.id, 1, 1, "TEXT");
+        if(a < 30){
+            new Escrita(this.id, numArq, 1, "TEXT");
         }
         else{
-            new Leitura(this.id, 1, 1, 10);
+            new Leitura(this.id, numArq, 1, 10);
         }
     }
     
